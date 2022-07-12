@@ -124,6 +124,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 STATICFILES_DIRS = [
     BASE_DIR / "theplug/static",
+    BASE_DIR / "theplugng/static",
+    BASE_DIR / "theplugng/theplug/static",
 ]
 
 # Default primary key field type
