@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all" />
+</head>
+<body>
+
+	<div class="content-w3ls" style="background: grey;">
+	<div class="content-agile1">
+		
+	</div>
+	<div class="content-agile2">
+		<form action="{% url 'theplug:create_post' %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			<div class="form-control w3layouts"> 
+				<input type="text" id="firstname" name="title" placeholder="Post Title"  title="Please enter your Username" required="">
+			</div>
+
+<br><br>
+			<div class="form-control agileinfo">	
+				<textarea type="text" class="lock" name="body" placeholder="" id="password1" required="" style="margin-left: 80px;
+				height: 300px; width: 300px;">Enter your content here
+				</textarea>
+				<br><br>
+				<input type="file" name="file" style="float: right;">
+				<br><br>
+			</div>	
+
+	
+			
+			<input type="submit" class="register" value="Create Post">
+		</form>
+		
+	</div>
+	<div class="form-control agileinfo" style="margin-top: 20%; color: white; padding-left: 12px;"> 
+				<a href="{% url 'theplug:logout' %}">
+					<h3 style="font-style: italic;">logout</h3>
+				</a>
+			</div>
+	<!-- <div class="content-agile2" style="background: grey;">
+
+ 
+			<div class="form-control w3layouts" style="margin-top: 20%;"> 
+				<h3 style="font-style: italic;">Create new Post</h3>
+			</div>
+
+
+			<div class="form-control agileinfo" style="margin-top: 20%; margin-bottom: 50px;">	
+				
+				<ul style="padding-left: 15px; padding-bottom: 15px;">
+			<li style="padding-bottom: 20px;">
+				<button style="font-size: 18px;">Add New Post </button>
+			</li>
+			<li>
+				<button style="font-size: 18px;">View all Posts </button>
+	</ul>
+		</div>	
+		<div class="form-control agileinfo" style="margin-top: 20%; color: white; padding-left: 12px;"> 
+				<a href="{% url 'theplug:logout' %}">
+					<h3 style="font-style: italic;">logout</h3>
+				</a>
+			</div>
+	
+			
+			
+	</div> -->
+	<div class="clear"></div>
+</div>
+
+
+
+</body>
+</html>

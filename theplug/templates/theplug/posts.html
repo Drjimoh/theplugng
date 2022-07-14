@@ -17,11 +17,31 @@
 	<div class="content-agile1">
 		
 	</div>
-	<div class="content-agile2" style="background: grey;">
+	<div class="content-agile2" style="color: white;">
+		<br><br>
+		<h5 style="padding-left: 20px;">Lists of recently Published Posts</h5>
+		<br>
+		<ul style="padding-left: 20px; list-style: bullet;">
+			{% for post in posts %}
+			<li> {{ post.title }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+<br><br><br>
+	<div class="form-control agileinfo" style="margin-top: 20%; padding-left: 20px; margin-bottom: 50px;">	
+				
+				<ul style="padding-left: 15px; padding-bottom: 15px;">
+			<li style="padding-bottom: 20px;">
+				<button style="font-size: 18px;">Add Another Post </button>
+			</li>
+			
+	</ul>
+		</div>	
+	<!-- <div class="content-agile2" style="background: grey;">
 
  
 			<div class="form-control w3layouts" style="margin-top: 20%;"> 
-				<h3 style="font-style: italic;">Welcome home, {{ username }}</h3>
+				<h3 style="font-style: italic;">Create new Post</h3>
 			</div>
 
 
@@ -29,10 +49,10 @@
 				
 				<ul style="padding-left: 15px; padding-bottom: 15px;">
 			<li style="padding-bottom: 20px;">
-				<button style="font-size: 18px;" onclick="location.href='{% url 'theplug:create_post' %}'">Add New Post </button>
+				<button style="font-size: 18px;">Add New Post </button>
 			</li>
 			<li>
-				<button style="font-size: 18px;" onclick="location.href='{% url 'theplug:created' %}'">View all Posts </button>
+				<button style="font-size: 18px;">View all Posts </button>
 	</ul>
 		</div>	
 		<div class="form-control agileinfo" style="margin-top: 20%; color: white; padding-left: 12px;"> 
@@ -40,10 +60,10 @@
 					<h3 style="font-style: italic;">logout</h3>
 				</a>
 			</div>
-		
+	
 			
 			
-	</div>
+	</div> -->
 	<div class="clear"></div>
 </div>
 
