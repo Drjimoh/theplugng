@@ -45,7 +45,7 @@ def dashboard(request):
 		return render(request, 'theplug/login.html', {})
 
 def add_post(request):
-	if request.user.is_authenticated:
+	if request.user is not None:
 		if request.method == "POST":
 			title = request.POST.get("title", None)
 			body = request.POST.get("body", None)
