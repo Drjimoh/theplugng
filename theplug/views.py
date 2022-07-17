@@ -3,7 +3,19 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db.models import Q
 from theplug.models import Post
+from django.views import generic
 
+
+
+
+
+class PostList(generic.ListView):
+    queryset = Post.objects.all().order_by('-date_added')
+    template_name = 'theplug/sign_up.html'
+
+class PostDetail(generic.DetailView):
+    model = Post
+    template_name = 'theplug/post_detail.html'
 
 
 

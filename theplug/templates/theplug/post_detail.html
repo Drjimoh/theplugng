@@ -19,29 +19,25 @@
 <body>
 <h1 class="w3ls">My Blog Post</h1>
 <div class="content-w3ls" style="background:white;">
+	<div class="content-agile2" style="color: white;">
+		<span style="float:right; font-style:bold; font-size: 14px; color:black;"> <a href="{% url 'theplug:sign_up' %}">Go Home </a></span>
+
+		<br><br><br>
+	</div>
 	<div class="content-agile1" style="background:none; padding-top: 50px; padding-left: 20px;">
-		{% for post in post_list %}
-			<a href="{% url 'theplug:post_detail' post.id %}">
+		
 			<span  style="padding-left:50px; padding-top: 50px; font-size: 12px; font-style: italic; "> {{ post.date_added }}</span>
-			<h2 style="padding-left:50px; padding-top: 0px; color: black; font-family: verdana; font-size:34px; font-style: bold; font-weight: 700">  {{ post.title.upper }}</h2>
+			<h2 style="padding-left:50px; padding-top: 0px; color: black; font-family: verdana; font-size:34px; font-style: bold; font-weight: 700"> {{ post.title.upper }}</h2>
 			<br>
-			{% if post.image %}
-			<img src="{{ post.image.url }}" style="padding-left:50px; padding-top: 50px;">
-			<br>
-			{% endif %}
 			<span style="padding-left:50px; padding-top: 50px; padding-bottom:100px;">
 				{{ post.body }}
 			</span>
-			</a>
 			<br><br>
-			{% endfor %}
-		
+			
 		
 		
 	</div>
-	<div class="content-agile2" style="color: white;">
-		
-	</div>
+
 	<div class="clear"></div>
 </div>
 <p class="copyright w3l">© 2017 Official Signup Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
