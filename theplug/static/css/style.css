@@ -116,7 +116,7 @@ h1.w3ls {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    height: 555px;
+    min-height: 555px;
 }
 h2.agileits1 {
     font-size: 40px;
@@ -431,7 +431,7 @@ h2.agileits1 {
 }
 .content-w3ls .content-agile1 {
     width: 100%;
-    height: 200px;
+    min-height: 200px;
 }
 }
 

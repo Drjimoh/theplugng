@@ -16,10 +16,10 @@
 <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all" />
 <!-- /css -->
 </head>
-<body>
-<h1 class="w3ls">My Blog Post</h1>
-<div class="content-w3ls" style="background:white;">
-	<div class="content-agile1" style="background:none; padding-top: 50px; padding-left: 20px;">
+<body style="background:white;">
+<h1 class="w3ls" style="color:black;">My Blog Post</h1>
+<div class="content-w3ls" style="background:white;" style="min-height: 1000px !important;">
+	<div class="content-agile1" style="background:white; padding-top: 50px; padding-left: 20px;">
 		{% for post in post_list %}
 			<a href="{% url 'theplug:post_detail' post.id %}">
 			<span  style="padding-left:50px; padding-top: 50px; font-size: 12px; font-style: italic; "> {{ post.date_added }}</span>
@@ -29,11 +29,11 @@
 			<img src="{{ post.image.url }}" style="padding-left:50px; padding-top: 50px;">
 			<br>
 			{% endif %}
-			<span style="padding-left:50px; padding-top: 50px; padding-bottom:100px;">
-				{{ post.body }}
-			</span>
+			<p style="padding-left:50px; padding-top: 50px; padding-bottom:100px;">
+				{{ post.body|slice:":250" }}
+			</p>
 			</a>
-			<br><br>
+			
 			{% endfor %}
 		
 		
@@ -44,6 +44,6 @@
 	</div>
 	<div class="clear"></div>
 </div>
-<p class="copyright w3l">© 2017 Official Signup Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
+<p ></p>
 </body>
 </html>
